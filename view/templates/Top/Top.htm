@@ -1,0 +1,16 @@
+<html>
+<title>Topページ</title>
+<body>
+	<h1>ゲームタイトル</h1>
+
+	<form method="POST" action='/game/'　>
+		ID:<input type="text" name="id"><br>
+		PASS:<input type="text" name="pass"><br>
+		<input type='hidden' name='mode' value='mypage'>
+		<input type='hidden' name='action' value='mypage'>
+		<input type="submit" value="login">
+	</form>
+
+	<a href = '?mode=top&action=newEntry'>新規登録</a>
+</body>
+</html>

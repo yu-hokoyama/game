@@ -33,4 +33,16 @@ class Common{
 		// テンプレート出力
 		$objSmarty->display(SMARTY_TEMPLATES_DIR.$mode.'/'.$action.'.htm');
 	}
+
+	/**
+	 * Sessionの確認
+	 *
+	 * @return Sessionに値がなければログイン画面に飛ばす
+	 */
+	static function checkSession(){
+		if(!isset($_SESSION['uid']) || !isset($_SESSION['pass'])){ 
+			header("Location: index.php");
+		}
+
+	}
 }
